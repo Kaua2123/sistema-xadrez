@@ -1,2 +1,0 @@
-# sistema-xadrez
-PROJETO ACADÊMICO. 
