@@ -1,6 +1,6 @@
 package chess;
 
-import java.security.InvalidParameterException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -128,7 +128,7 @@ public class ChessMatch {
 			throw new IllegalStateException("Nao ha peca para ser promovida.");
 		}
 		if (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
-			throw new InvalidParameterException("Tipo invalido para promocao");
+			return promoted;
 		}
 		
 		Position pos = promoted.getChessPosition().toPosition();
@@ -140,7 +140,7 @@ public class ChessMatch {
 		board.placePiece(newPiece, pos);
 		piecesOnTheBoard.add(newPiece);
 		
-		return newPiece;
+		return newPiece;	
 	}
 	
 	private ChessPiece newPiece(String type, Color color) {
